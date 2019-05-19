@@ -16,13 +16,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didEndOnExit(_ sender: UITextField) {
-        guard let urlString = sender.text, let url = URL(string: urlString) else {
+        open(urlString: sender.text)
+    }
+    
+    internal func open(urlString: String?, application: UIApplicationProtocol = UIApplication.shared) {
+        guard let urlString = urlString, let url = URL(string: urlString) else {
             return
         }
         
-        if UIApplication.shared.canOpenURL(url) {
-            // 入力したURLを開ける場合に開く
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        if application.canOpenURL(url) {
+            // 引数のURLを開ける場合に開く
+            application.open(url, options: [:], completionHandler: nil)
         }
     }
     

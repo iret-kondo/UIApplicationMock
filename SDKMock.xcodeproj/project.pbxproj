@@ -13,6 +13,8 @@
 		9EB0857022916D0E00734F39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB0856F22916D0E00734F39 /* Assets.xcassets */; };
 		9EB0857322916D0E00734F39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB0857122916D0E00734F39 /* LaunchScreen.storyboard */; };
 		9EB0857E22916D0E00734F39 /* SDKMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB0857D22916D0E00734F39 /* SDKMockTests.swift */; };
+		9EB085892291717500734F39 /* UIApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB085882291717500734F39 /* UIApplicationProtocol.swift */; };
+		9EB0858B229172D700734F39 /* UIApplicationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB0858A229172D700734F39 /* UIApplicationMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		9EB0857922916D0E00734F39 /* SDKMockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKMockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB0857D22916D0E00734F39 /* SDKMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKMockTests.swift; sourceTree = "<group>"; };
 		9EB0857F22916D0E00734F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EB085882291717500734F39 /* UIApplicationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationProtocol.swift; sourceTree = "<group>"; };
+		9EB0858A229172D700734F39 /* UIApplicationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 				9EB0856F22916D0E00734F39 /* Assets.xcassets */,
 				9EB0857122916D0E00734F39 /* LaunchScreen.storyboard */,
 				9EB0857422916D0E00734F39 /* Info.plist */,
+				9EB085882291717500734F39 /* UIApplicationProtocol.swift */,
 			);
 			path = SDKMock;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 			children = (
 				9EB0857D22916D0E00734F39 /* SDKMockTests.swift */,
 				9EB0857F22916D0E00734F39 /* Info.plist */,
+				9EB0858A229172D700734F39 /* UIApplicationMock.swift */,
 			);
 			path = SDKMockTests;
 			sourceTree = "<group>";
@@ -197,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EB085892291717500734F39 /* UIApplicationProtocol.swift in Sources */,
 				9EB0856B22916D0C00734F39 /* ViewController.swift in Sources */,
 				9EB0856922916D0C00734F39 /* AppDelegate.swift in Sources */,
 			);
@@ -206,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EB0858B229172D700734F39 /* UIApplicationMock.swift in Sources */,
 				9EB0857E22916D0E00734F39 /* SDKMockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

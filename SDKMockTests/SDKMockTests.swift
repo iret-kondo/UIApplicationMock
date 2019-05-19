@@ -18,17 +18,38 @@ class SDKMockTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testOpenUrl() {
+        let viewController = ViewController()
+        let mock = UIApplicationMock()
+        mock.stubbedCanOpenURLResult = true
+        
+        viewController.open(urlString: "hoge", application: mock)
+        
+        XCTAssertTrue(mock.invokedCanOpenURL)
+        XCTAssertTrue(mock.invokedOpen)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testOpenUrlFailed() {
+        let viewController = ViewController()
+        let mock = UIApplicationMock()
+        mock.stubbedCanOpenURLResult = false
+        
+        viewController.open(urlString: "hoge", application: mock)
+        
+        XCTAssertTrue(mock.invokedCanOpenURL)
+        XCTAssertFalse(mock.invokedOpen)
+    }
+    
+    func testOpenUrlGuardReturn() {
+        let viewController = ViewController()
+        let mock = UIApplicationMock()
+        mock.stubbedCanOpenURLResult = true
+        
+        viewController.open(urlString: "", application: mock)
+        
+        XCTAssertFalse(mock.invokedCanOpenURL)
+        XCTAssertFalse(mock.invokedOpen)
     }
 
 }
